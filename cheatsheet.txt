@@ -1,0 +1,1 @@
+My Doctor Command: df -h ; systemctl status my-app ; journalctl -u my-app -n 20 | grep -i error
