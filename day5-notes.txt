@@ -1,0 +1,1 @@
+Day 5 - Networking: ip a shows my IP 172.18.155.252, ping checks internet 0% loss
