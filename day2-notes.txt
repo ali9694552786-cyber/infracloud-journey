@@ -1,0 +1,2 @@
+# Day 2 - Linux 10 Commands
+1. pwd, ls, mkdir, touch, cat, cp, mv, rm, history, whoami, grep, df - Done!

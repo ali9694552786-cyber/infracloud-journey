@@ -1,0 +1,3 @@
+error: failed
+success: ok
+error: disk full
