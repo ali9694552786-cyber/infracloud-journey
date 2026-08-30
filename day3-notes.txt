@@ -1,0 +1,1 @@
+Day 3 - Permissions: r=read, w=write, x=execute | Command: ls -l, chmod 777 file, chmod 755 file
