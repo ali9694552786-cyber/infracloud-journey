@@ -1,0 +1,6 @@
+Day 7 - Linux Permissions
+- adduser se naya user banta hai
+- ls -l se permission dikhta hai (rwx)
+- chmod 600 = only owner can read/write (secure)
+- chmod 777 = everyone can do everything (dangerous!)
+- sudo password = laptop login password
