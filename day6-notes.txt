@@ -1,0 +1,6 @@
+Day 6 - Learned SSH
+- ssh-keygen to create key pair (id_rsa and id_rsa.pub)
+- cat id_rsa.pub >> authorized_keys
+- chmod 600 authorized_keys
+- ssh localhost to login to own machine
+- Real server: ssh user@ip
