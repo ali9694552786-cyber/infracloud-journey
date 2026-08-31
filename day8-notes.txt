@@ -1,0 +1,6 @@
+Day 8 - My First Web Server (Nginx)
+- sudo apt install nginx -y = web server install
+- sudo systemctl start/status nginx = server on/off
+- curl localhost = apne hi server ko check karna
+- /var/www/html/index.html = website ki file yahan hoti hai
+- echo ... | sudo tee ... = apni website banana
