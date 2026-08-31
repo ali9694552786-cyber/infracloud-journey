@@ -1,22 +1,20 @@
-# InfraCloud - 15 Days AWS Journey
-By Ali
+# ☁️ InfraCloud Journey - 90 Days DevOps Challenge
 
-## Projects Done:
-- Day 1-2: Linux & Networking Basics
-- Day 3-5: Web Server (Nginx) on Local + EC2
-- Day 6-7: EC2, EBS Deep Dive
-- Day 8-9: S3 Static Website Hosting
-- Day 10: Snapshot & AMI Backup Strategy
-- Day 11: CloudWatch Monitoring & Alarms
-- Day 12: IAM Users & Policies
-- Day 13: VPC - Public/Private Subnet, IGW
-- Day 14: Load Balancer & Auto Scaling
-- Day 15: Final Architecture Project
+**By Ali | Jaipur**
 
-## Final Architecture:
-Internet -> VPC (10.0.0.0/16) -> Public Subnet (Web) -> ALB -> 2x EC2 (Nginx) -> S3 Backup + CloudWatch Alarms + IAM Roles
+### 🚀 Phase 1: AWS Foundation (Day 1-15) - COMPLETED ✅
+- [x] Linux & Networking
+- [x] EC2, EBS, S3, Snapshot, AMI
+- [x] VPC, IAM, CloudWatch, Load Balancer
+- [x] Final Production Architecture
 
-## Skills Learned:
-AWS EC2, S3, VPC, IAM, CloudWatch, Load Balancer, Linux, Git, GitHub
+### 🐳 Phase 2: Docker & Kubernetes (Starting Now)
+- Day 16: Docker Basics
+- Day 17: Dockerfile
+- Day 18: Docker Compose
 
-Next: Docker & Kubernetes (Day 16 Onwards)
+🔗 **Live Demo:** S3 Static Website (link add karna)
+📫 **Contact:** ali...
+
+### How to run?
+git clone https://github.com/ali9694552786-cyber/infracloud-journey.git
