@@ -1,0 +1,7 @@
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+my-web   3/3     3            3           13m
+NAME                      READY   STATUS    RESTARTS   AGE
+my-first-pod              1/1     Running   0          23m
+my-web-8698dc5fb9-8x5xg   1/1     Running   0          50s
+my-web-8698dc5fb9-dltcp   1/1     Running   0          50s
+my-web-8698dc5fb9-qlm62   1/1     Running   0          50s
