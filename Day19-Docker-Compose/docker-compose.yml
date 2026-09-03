@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: alidockerad/my-custom-website:v1
+    ports:
+      - "8082:80"
+    container_name: my-web
+  
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+    container_name: my-db
+
