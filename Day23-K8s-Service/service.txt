@@ -1,0 +1,4 @@
+NAME     TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+my-web   NodePort   10.98.180.106   <none>        80:31324/TCP   7m58s
+NAME     ENDPOINTS                                   AGE
+my-web   10.244.0.7:80,10.244.0.8:80,10.244.0.9:80   8m14s
