@@ -1,0 +1,62 @@
+Name:             healthy-app-866f48bf98-tw5ck
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 12 Sep 2026 10:51:08 +0000
+Labels:           app=healthy-app
+                  pod-template-hash=866f48bf98
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.6
+IPs:
+  IP:           10.244.0.6
+Controlled By:  ReplicaSet/healthy-app-866f48bf98
+Containers:
+  nginx:
+    Container ID:   containerd://da6bebf24cbef80f6915f979b02170c8354d3e604aac70a64feadb1b35d642d6
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:05b8cb60c354a44ab824ea6e7dc69b46d50762cdbe728a347a5b656e6fb3d7c4
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 12 Sep 2026 10:51:11 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     200m
+      memory:  256Mi
+    Requests:
+      cpu:        100m
+      memory:     128Mi
+    Liveness:     http-get http://:80/ delay=5s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:    http-get http://:80/ delay=3s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-8msmz (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-8msmz:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  56s   default-scheduler  Successfully assigned default/healthy-app-866f48bf98-tw5ck to minikube
+  Normal  Pulling    55s   kubelet            spec.containers{nginx}: Pulling image "nginx"
+  Normal  Pulled     53s   kubelet            spec.containers{nginx}: Successfully pulled image "nginx" in 2.082s (2.082s including waiting). Image size: 66343926 bytes.
+  Normal  Created    53s   kubelet            spec.containers{nginx}: Container created
+  Normal  Started    53s   kubelet            spec.containers{nginx}: Container started
