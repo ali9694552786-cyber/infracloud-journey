@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"env-demo","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"env-demo"}},"template":{"metadata":{"labels":{"app":"env-demo"}},"spec":{"containers":[{"env":[{"name":"APP_USER","valueFrom":{"secretKeyRef":{"key":"username","name":"my-secret"}}},{"name":"APP_PASSWORD","valueFrom":{"secretKeyRef":{"key":"password","name":"my-secret"}}},{"name":"ENVIRONMENT","value":"production"}],"image":"nginx","name":"nginx"}]}}}}
+  creationTimestamp: "2026-09-12T10:45:33Z"
+  generation: 1
+  name: env-demo
+  namespace: default
+  resourceVersion: "5360"
+  uid: 9ab76c10-ae21-4388-8563-ee3174fc3d6d
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: env-demo
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: env-demo
+    spec:
+      containers:
+      - env:
+        - name: APP_USER
+          valueFrom:
+            secretKeyRef:
+              key: username
+              name: my-secret
+        - name: APP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: my-secret
+        - name: ENVIRONMENT
+          value: production
+        image: nginx
+        imagePullPolicy: Always
+        name: nginx
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-09-12T10:45:36Z"
+    lastUpdateTime: "2026-09-12T10:45:36Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-09-12T10:45:33Z"
+    lastUpdateTime: "2026-09-12T10:45:36Z"
+    message: ReplicaSet "env-demo-787498697d" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  terminatingReplicas: 0
+  updatedReplicas: 1
